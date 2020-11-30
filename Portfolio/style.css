@@ -1,0 +1,377 @@
+
+@font-face {
+    font-family: "Kamerik";
+    src: url(/kamerik/Kamerik-book/Kamerik-Book.ttf);
+}
+
+@font-face {
+    font-family: "kamerik-bold";
+    src: url(/kamerik/Kamerik-Bold/Kamerik-Bold.ttf);
+}
+
+:root {
+
+    --dark: #292a2b;
+    --light: #e0dfdb;
+    --orange: #ed5d40;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #e0dfdb;
+    /* padding: 100px 100px 100px 275px; */
+    font-family: "kamerik-bold", sans-serif;
+    font-size: 24px;
+    color: #292a2b;
+    overflow-x: hidden;
+}
+
+i {
+    font-family: "fontawesome" !important;
+    font-weight: 900;
+    color: var(--dark);
+}
+
+h1 {
+    font-size: 80px;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+.flex {
+    display: flex;
+}
+
+.j-c {
+    justify-content: center;
+    align-items: center;
+}
+
+.j-s-b {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.j-s-a {
+    justify-content: space-around;
+    
+}
+
+.f-c {
+    flex-direction: column;
+}
+
+.container {
+    padding: 90px 50px;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.intro {
+    position: absolute;
+    top: auto;
+    left: auto;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    visibility: hidden;
+    z-index: 20;
+}
+
+.intro1 {
+    animation: intro1 ease-out .6s;
+    opacity: 0;
+}
+
+.intro2 {
+    opacity: 0;
+    animation: intro2 ease-out 1s;
+    
+}
+
+.intro3 {
+    opacity: 0;
+    animation: intro3 ease-out 1.4s;
+
+}
+
+.header {
+    height: 100vh;
+}
+
+.intro_bar {
+    height: 100vh;
+    width: 33.33%;
+    background: var(--dark);
+    transform-origin: bottom;
+    transform: scaleY(1);
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    display: flex;
+    margin-bottom: auto;
+}
+
+.name > h4 {
+    margin-top: auto;
+}
+
+.logo {
+    margin-right: 28px;
+    height: 32px;
+}
+
+.heading_github {
+    color: var(--dark);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: auto;
+    transition: all ease-out .35s;
+}
+
+.heading_github:hover {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.hero {
+    padding: 100px 0;
+    width: 100%;
+    
+}
+
+.hero_content {
+    flex: 1;
+}
+
+.hero_content > p {
+    font-family: "kamerik", sans-serif;
+    line-height: 35px;
+}
+
+.projects_link {
+    flex: 1;
+}
+
+.proj_link {
+    text-decoration: none;
+}
+
+.projects_go {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: var(--dark);
+    color: var(--light);
+    font-size: 28px;
+    transform: rotate(20deg);
+    transition: all ease-out .35s;
+    
+}
+
+.projects_go:hover {
+    background: var(--orange);
+    color: var(--dark);
+    transform: rotate(-20deg);
+}
+
+.projects_go > p {
+    margin-right: 20px;
+}
+
+.mentor {
+    color: var(--orange);
+    position: relative;
+}
+
+.mentor-arrow {
+    position: relative;
+    margin-left: 3px;
+    transform: translateY(0);
+    transition: all ease-out .35s;
+}
+
+.mentor:hover .mentor-arrow {
+    margin-bottom: 5px;
+
+}
+
+.mentor_link {
+    font-size: 16px;
+}
+
+.projects {
+    height: 90vh;
+    padding-top: 60px;
+}
+
+.proj_heading {
+    width: 80%;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-bottom: solid 2px var(--dark);
+}
+
+.proj_heading h2 {
+    font-size: 20px;
+    font-family: "kamerik", sans-serif;
+}
+
+.project {
+    position: relative;
+    width: 80%;
+    font-size: 50px;
+    text-decoration: none;
+    color: var(--dark);
+    border-bottom: solid 2px var(--dark);
+    margin: 0 auto;
+    padding: 20px 20px;
+    font-family: "kamerik", sans-serif;
+}
+
+.proj_arrow {
+    position: relative;
+    transform: rotate(-45deg);
+    transition: all ease-out .35s;
+}
+
+.project:hover .proj_arrow {
+    transform: rotate(0);
+}
+
+.project:hover {
+    font-family: "kamerik-bold", sans-serif;
+}
+
+.proj_img {
+    visibility: hidden;
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    
+}
+
+.insure_img {
+    background: url(/images/insure_img.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.swim_img {
+    background: url(/images/swim_img.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fylo_img {
+    background: url(/images/fylo_img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.social_img {
+    background: url(/images/social_img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.form_img {
+    background: url(/images/gog_img.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.project:hover > .proj_img {
+    visibility: visible;
+}
+
+.trademark {
+    font-family: "kamerik", sans-serif;
+    font-size: 14px;
+    padding: 0;
+    padding-bottom: 50px;
+}
+
+
+@keyframes intro1 {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+
+    }
+
+    20% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(0);
+        visibility: hidden;
+    }
+}
+
+@keyframes intro2 {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(0);
+        visibility: hidden;
+    }
+}
+
+@keyframes intro3 {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    66% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(0);
+        visibility: hidden;
+    }
+}
